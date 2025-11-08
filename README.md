@@ -116,7 +116,7 @@ pointing to the previous and next free blocks, respectively.
 The size to store these addresses depends on whether you're on a 32-bit or a 64-bit system. Nowadays, most modern machines
 are 64-bit, so `prev`/`next` are typically 8 bytes each. 
 Figure 6 shows a free block in this layout: The prologue and epilogue blocks remain. The only thing that changed is that now each unallocated block holds information about
-its previous and next free blocks. As there are currently no other free blocks available, both `prev` and `free` are `NULL`.
+its previous and next free blocks. As there are currently no other free blocks available, both `prev` and `next` are `NULL`.
 <figure id="figure-6">
   <img src="diagrams/explicit_free_list-block-definition.svg" alt="A block in an explicit free list">
   <figcaption><em>Figure 6: A block in an explicit free list</em></figcaption>
